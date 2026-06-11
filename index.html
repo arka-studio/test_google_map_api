@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Maps API Key Tester</title>
+    <meta
+      name="description"
+      content="Tool kecil untuk mengetes API key Google Maps JavaScript API tanpa menyimpan key."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="card" aria-labelledby="page-title">
+        <div class="badge">Google Maps API Checker</div>
+
+        <header class="header">
+          <h1 id="page-title">Tes API Key Google Map</h1>
+          <p>
+            Masukkan API key Google Maps kamu, lalu tekan tombol
+            <strong>Tes</strong>. Key hanya dipakai sekali di browser dan tidak
+            disimpan.
+          </p>
+        </header>
+
+        <form id="api-key-form" class="form" autocomplete="off">
+          <label for="api-key">API Key Google Maps</label>
+          <div class="input-row">
+            <input
+              id="api-key"
+              name="apiKey"
+              type="password"
+              inputmode="text"
+              placeholder="Masukkan API key..."
+              autocomplete="off"
+              spellcheck="false"
+              required
+            />
+            <button id="toggle-key" class="ghost-button" type="button">
+              Lihat
+            </button>
+          </div>
+
+          <button id="test-button" class="primary-button" type="submit">
+            Tes
+          </button>
+        </form>
+
+        <section id="result" class="result is-idle" aria-live="polite">
+          <div class="result-title">Belum dites</div>
+          <p>Isi API key, lalu klik tombol Tes untuk melihat hasil.</p>
+        </section>
+
+        <section class="notes" aria-labelledby="notes-title">
+          <h2 id="notes-title">Yang dicek</h2>
+          <p>
+            Tool ini mencoba memuat <strong>Google Maps JavaScript API</strong>
+            dari browser. Jika gagal, biasanya karena API belum aktif, billing
+            belum aktif, key salah, atau domain belum diizinkan.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
